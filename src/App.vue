@@ -19,4 +19,7 @@ export default {
     html {
         background-color: #333;
     }
+    .wrapper {
+        position: relative;
+    }
 </style>

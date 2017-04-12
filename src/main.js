@@ -13,4 +13,8 @@ new Vue({
     router,
     template: '<App/>',
     components: { App, ...Component },
+    ready() {
+        this.$scrollSet();
+    },
 });
+
