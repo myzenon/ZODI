@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "postinstall": "node_modules/.bin/bower install",
+    "start": "npm run dev"
   },
   "dependencies": {
     "vue": "^2.2.2",
