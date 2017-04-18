@@ -1,10 +1,9 @@
 <template>
+    <div>
     <div class="wrapper">
         <div class="container">
-            <div class="field-form">
-                <h1 class="title is-1 font-color">Create Lakkana Chart</h1>
                 <div class="field">
-                    <label class="label font-color">Profiles</label>
+                    <label class="label font-style">Profiles</label>
                     <p class="control">
                         <span class="select">
                             <select>
@@ -17,50 +16,53 @@
                     </p>
                 </div>
                 <div class="field">
-                    <label class="label font-color">Full name</label>
+                    <label class="label font-style">Full name</label>
                     <p class="control">
                         <input class="input" type="text" placeholder="Text full name">
                     </p>
                 </div>
                 <div class="field">
-                    <label class="label font-color">Birth Date</label>
+                    <label class="label font-style">Birth Date</label>
                     <p class="control">
                         <input class="input" type="datetime-local">
                     </p>
                 </div>
                 <div class="field">
-                    <label class="label font-color">Hometown</label>
+                    <label class="label font-style">Hometown</label>
                     <p class="control">
-                        <input class="input" type="text" placeholder="Location">
+                        <span class="select">
+                            <select>
+                                <option>Thailand</option>
+                                <option>America</option>
+                                <option>Australia</option>
+                                <option>Korea</option>
+                            </select>
+                        </span>
                     </p>
                 </div>
                 <div class="field">
-                    <label class="label font-color">Date of prediction</label>
+                    <label class="label font-style">Date of prediction</label>
                     <p class="control">
                         <input class="input" type="datetime-local">
                     </p>
                 </div>
                 <div class="field">
-                    <label class="label font-color">Predict Location</label>
+                    <label class="label font-style">Predict Location</label>
                     <p class="control">
-                        <input class="input" type="text" placeholder="Location">
+                        <span class="select">
+                            <select>
+                                <option>Thailand</option>
+                                <option>America</option>
+                                <option>Australia</option>
+                                <option>Korea</option>
+                            </select>
+                        </span>
                     </p>
-                </div>
-
-                <div class="nav-left">
-                    <a class="nav-item">
-                    </a>
-                </div>
-                <div class="nav-center">
-                    <a class="nav-item">
-                        <a class="button is-info is-inverted is-outlined">Create</a>
-                    </a>
-                </div>
-                <div class="nav-right">
-                    <a class="nav-item">
-                    </a>
                 </div>
             </div>
+        </div>
+        <div class="footer-button">
+            CREATE
         </div>
     </div>
 </template>
@@ -70,16 +72,27 @@
 </script>
 
 <style scoped>
-    .field-form{
-        padding: 30px 80px 30px 80px;
+    .container {
+        background-color: #212121;
+        padding: 12vw 10vw 30vw 10vw;
     }
-    body{
-        background-color: #222;
-    }
-    .font-color{
+    .font-style {
         color: #bbb;
+        font-size: 5.2vw;
     }
-    .center-core{
+    .center-core {
         text-align: center;
+    }
+    .footer-button {
+        position: fixed;
+        color: white;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: #3c0d76;
+        padding: 4.5vmin 0;
+        font-size: 5.2vw;
+        font-weight: bold;
     }
 </style>
