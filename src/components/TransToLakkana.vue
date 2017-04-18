@@ -279,7 +279,11 @@ div.transform {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-
+    background-image: url('../assets/sec1.jpg');
+    background-size: cover;
+    background-position: left;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+    padding-top: 20px;
 }
 
 div.header_image {
@@ -327,9 +331,9 @@ div.mapping-table {
 h1.header_text{
     text-align: center;
     font-size : 150%;
-    color: #bbb;
+    color: #a49cba;
 }
 div.select_area{
-     background-color: #891abc;
+     background-color: #333;
 }
 </style>
