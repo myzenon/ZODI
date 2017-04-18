@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/components/Index.vue';
+import Index from '@/components/Index';
 import Exercise from '@/components/Exercise';
 
 Vue.use(Router);
