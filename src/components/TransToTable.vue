@@ -47,7 +47,6 @@
             </select>
         </span>
         </p>
-        </p>
         <p class="symbol"> ๓ :
             <span class="select">
             <select>
@@ -228,9 +227,11 @@
         </span>
         </p>
     </div>
+    <router-link to="/TableFromLukkana">
     <div class="transform">
-        <button type="button" class="transform">Transform</button>
+       <p class="transform">Transform</p>
     </div>
+    </router-link>
 </div>
 
 </template>
@@ -247,16 +248,17 @@ export default {
 </script>
 
 <style scoped>
-body {
-    background-color: #333;
-}
 
 p.symbol {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
     font-size : 150%;
-    color: #bbb;
+    color: #eee;
+}
+
+p.transform{
+    color : #bbb;
 }
 
 button.transform {
@@ -272,13 +274,12 @@ div.transform {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-image: url('../assets/sec1.jpg');
-    background-size: cover;
-    background-position: left;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
-    padding-top: 20px;
+    position: fixed;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    background-color: #2b106d;
 }
-
 div.header_image {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -294,39 +295,12 @@ section.header{
 span.select {
     border: 1px solid #891abc;
 }
-
-table.mapping {
-    border: 1px solid #891abc;
-    background-color: #fff;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-}
-
-td.mapping-table {
-    text-align: center;
-    border: 1px solid #891abc;
-    padding: 10px 0px;
-    color: #891abc;
-}
-
-th.mapping-table {
-    text-align: center;
-    border: 1px solid #891abc;
-    color: #891abc;
-}
-
-div.mapping-table {
-    text-align: center;
-    padding: 20px 0px;
-}
 h1.header_text{
     text-align: center;
     font-size : 150%;
     color: #a49cba;
 }
 div.select_area{
-     background-color: #111;
+    padding-bottom: 80px;
 }
 </style>
