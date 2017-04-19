@@ -2,13 +2,15 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Index from '@/components/Index';
 import Exercise from '@/components/Exercise';
+
 import TransTable from '@/components/TransTable';
 import TransTableResult from '@/components/TransTable-Result';
 
 import Create from '@/components/Create';
 import CreateResult from '@/components/Create-Result';
-import LakkanaChart from '@/components/LakkanaChart';
 
+import TranstoTable from '@/components/TransToTable';
+import TableFromLukkana from '@/components/TransToTable-Result';
 
 Vue.use(Router);
 
@@ -43,6 +45,16 @@ export default new Router({
             name: 'createResult',
             path: '/createResult',
             component: CreateResult,
+        },
+        {
+            name: 'chart-table',
+            path: '/chart-table',
+            component: TranstoTable,
+        },
+        {
+            name: 'TableFromLukkana',
+            path: '/TransToTable-Result',
+            component: TableFromLukkana,
         },
     ],
 });
