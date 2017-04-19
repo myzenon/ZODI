@@ -1,13 +1,22 @@
 <template>
     <div>
-    <div class="wrapper">
-        <div class="container">
+        <div class="wrapper">
+            <section id="section1" class="hero is-primary section1">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Create a Lakkana Chart
+                        </h1>
+                    </div>
+                </div>
+            </section>
+            <div class="containerCreate">
                 <div class="field">
-                    <label class="label font-style">Profiles</label>
+                    <label class="label font-style">Select from Profiles</label>
                     <p class="control">
                         <span class="select">
-                            <select  style="width:100%;">
-                                <option>New Profiles</option>
+                            <select>
+                                <option>No</option>
                                 <option>Profile 1</option>
                                 <option>Profile 2</option>
                                 <option>Profile 3</option>
@@ -16,13 +25,7 @@
                     </p>
                 </div>
                 <div class="field">
-                    <label class="label font-style">Full name</label>
-                    <p class="control">
-                        <input class="input" type="text" placeholder="Text full name">
-                    </p>
-                </div>
-                <div class="field">
-                    <label class="label font-style">Birth Date</label>
+                    <label class="label font-style">Date / Time of Birth</label>
                     <p class="control">
                         <input class="input" type="datetime-local">
                     </p>
@@ -31,26 +34,7 @@
                     <label class="label font-style">Hometown</label>
                     <p class="control">
                         <span class="select">
-                            <select  style="width:100%;">
-                                <option>Thailand</option>
-                                <option>America</option>
-                                <option>Australia</option>
-                                <option>Korea</option>
-                            </select>
-                        </span>
-                    </p>
-                </div>
-                <div class="field">
-                    <label class="label font-style">Date of prediction</label>
-                    <p class="control">
-                        <input class="input" type="datetime-local">
-                    </p>
-                </div>
-                <div class="field">
-                    <label class="label font-style">Predict Location</label>
-                    <p class="control">
-                        <span class="select">
-                            <select style="width:100%;">
+                            <select>
                                 <option>Thailand</option>
                                 <option>America</option>
                                 <option>Australia</option>
@@ -61,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <router-link to="/lakkanaChart">
+        <router-link to="/createResult">
             <div class="footer-button">
                 CREATE
             </div>
@@ -74,8 +58,7 @@
 </script>
 
 <style scoped>
-    .container {
-        background-color: #212121;
+    .containerCreate {
         padding: 12vw 10vw 30vw 10vw;
     }
     .font-style {
@@ -97,7 +80,20 @@
         font-size: 5.2vw;
         font-weight: bold;
     }
-        .select {
-            width: 100%;
-        }
+    select, .select {
+        width: 100%;
+    }
+    .wrapper {
+        background-color: #222;
+    }
+    .section1 {
+        background-image: url('../assets/sec1.jpg');
+        background-size: cover;
+        background-position: center right;
+        box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+    }
+    .section1 .hero-body {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
 </style>
