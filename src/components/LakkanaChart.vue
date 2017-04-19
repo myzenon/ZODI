@@ -118,6 +118,7 @@ export default {
         position: relative;
         font-size: 0;
         width: 100%;
+        background-color: #212121;
     }
     .lakkana-chart .star-img {
         width: 4.5vw;

@@ -6,7 +6,7 @@
                     <label class="label font-style">Profiles</label>
                     <p class="control">
                         <span class="select">
-                            <select>
+                            <select  style="width:100%;">
                                 <option>New Profiles</option>
                                 <option>Profile 1</option>
                                 <option>Profile 2</option>
@@ -31,7 +31,7 @@
                     <label class="label font-style">Hometown</label>
                     <p class="control">
                         <span class="select">
-                            <select>
+                            <select  style="width:100%;">
                                 <option>Thailand</option>
                                 <option>America</option>
                                 <option>Australia</option>
@@ -50,7 +50,7 @@
                     <label class="label font-style">Predict Location</label>
                     <p class="control">
                         <span class="select">
-                            <select>
+                            <select style="width:100%;">
                                 <option>Thailand</option>
                                 <option>America</option>
                                 <option>Australia</option>
@@ -61,9 +61,11 @@
                 </div>
             </div>
         </div>
-        <div class="footer-button">
-            CREATE
-        </div>
+        <router-link to="/lakkanaChart">
+            <div class="footer-button">
+                CREATE
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -95,4 +97,7 @@
         font-size: 5.2vw;
         font-weight: bold;
     }
+        .select {
+            width: 100%;
+        }
 </style>

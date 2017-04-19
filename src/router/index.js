@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Index from '@/components/Index';
 import Exercise from '@/components/Exercise';
 import Create from '@/components/Create';
+import LakkanaChart from '@/components/LakkanaChart';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
             name: 'create',
             path: '/create',
             component: Create,
+        },
+        {
+            name: 'lakkanaChart',
+            path: '/lakkanaChart',
+            component: LakkanaChart,
         },
     ],
 });
