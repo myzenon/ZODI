@@ -54,7 +54,7 @@
                     <h2 class="subtitle">
                         Transform a Lakkana table into chart form.
                     </h2>
-                    <a class="button is-light is-outlined">Transform to Chart</a>
+                    <router-link to="/table-chart" class="button is-light is-outlined">Transform to Chart</router-link>
                 </div>
             </div>
         </section>
