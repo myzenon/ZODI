@@ -9,7 +9,7 @@
                     <h2 class="subtitle">
                         Lakkana Chart is a thai zodiac diagram which displays a star position at your birth date/time.
                     </h2>
-                    <router-link to="/foo" class="button is-dark">Find out your Lakkana</router-link>
+                    <router-link to="/create" class="button is-dark">Find out your Lakkana</router-link>
                 </div>
             </div>
         </section>
