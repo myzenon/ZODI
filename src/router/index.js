@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Index from '@/components/Index';
 import Exercise from '@/components/Exercise';
 import TranstoTable from '@/components/TransToTable';
-import TableFromLukkana from '@/components/TablefromLukkana';
+import TableFromLukkana from '@/components/TransToTable-Result';
 
 Vue.use(Router);
 
@@ -26,7 +26,7 @@ export default new Router({
         },
         {
             name: 'TableFromLukkana',
-            path: '/TableFromLukkana',
+            path: '/TransToTable-Result',
             component: TableFromLukkana,
         },
     ],

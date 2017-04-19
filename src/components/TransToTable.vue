@@ -1,16 +1,13 @@
 <template>
 <div class="wrapper">
 <section class="header">
-    <div>
-        <h1 class="header_text"> Transform Lakkana Chart to Mapping-Table </h1>
-    </div>
     <div class="header_image">
         <lakkana></lakkana>
     </div>
 </section>
     <div class = "select_area">
         <p class="symbol"> ๑ :
-            <span class="select">
+            <span class="select ">
             <select>
                 <option>none</option>
                 <option>1</option>
@@ -66,7 +63,6 @@
             </select>
         </span>
         </p>
-        </p>
         <p class="symbol"> ๔ :
             <span class="select">
             <select>
@@ -85,7 +81,6 @@
                 <option>12</option>        
             </select>
         </span>
-        </p>
         </p>
         <p class="symbol"> ๕ :
             <span class="select">
@@ -106,7 +101,6 @@
             </select>
         </span>
         </p>
-        </p>
         <p class="symbol"> ๖ :
             <span class="select">
             <select>
@@ -125,7 +119,6 @@
                 <option>12</option>        
             </select>
         </span>
-        </p>
         </p>
         <p class="symbol"> ๗ :
             <span class="select">
@@ -146,7 +139,6 @@
             </select>
         </span>
         </p>
-        </p>
         <p class="symbol"> ๘ :
             <span class="select">
             <select>
@@ -165,7 +157,6 @@
                 <option>12</option>        
             </select>
         </span>
-        </p>
         </p>
         <p class="symbol"> ๙ :
             <span class="select">
@@ -186,8 +177,7 @@
             </select>
         </span>
         </p>
-        </p>
-        <p class="symbol"> 0 :
+        <p class="symbol"> ๐ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -206,8 +196,7 @@
             </select>
         </span>
         </p>
-        </p>
-        <p class="symbol"> ล :
+        <p class="symbol"> <img src="../assets/ARlux.png" class="ARlux"> :
             <span class="select">
             <select>
                 <option>none</option>
@@ -227,7 +216,7 @@
         </span>
         </p>
     </div>
-    <router-link to="/TableFromLukkana">
+    <router-link to="/TransToTable-Result">
     <div class="transform">
        <p class="transform">Transform</p>
     </div>
@@ -253,32 +242,31 @@ p.symbol {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    font-size : 150%;
-    color: #eee;
+    color: #eee;   
+    font-size : 130%; 
 }
 
 p.transform{
-    color : #bbb;
+    color : #fff;
+    font-size : 125%;
 }
-
-button.transform {
-    padding: 10px 0px 10px 0px;
-    border: 3px solid #891abc;
-    width: 35%;
-    color: #891abc;
-    background-color: #fff;
-    font-size: 150%;
+.ARlux{
+    width : 5%
 }
-
+span.select{
+    font-size : 100%
+}
 div.transform {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: fixed;
-    bottom : 0;
-    left : 0;
-    right : 0;
-    background-color: #2b106d;
+    background-color: #3c0d76;
+    padding: 4.5vmin 0;
+    font-size: 5.2vw;
+    font-weight: bold;
 }
 div.header_image {
     padding-top: 20px;
@@ -301,6 +289,7 @@ h1.header_text{
     color: #a49cba;
 }
 div.select_area{
+    padding-top: 30px;
     padding-bottom: 80px;
 }
 </style>
