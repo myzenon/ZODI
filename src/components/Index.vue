@@ -25,7 +25,7 @@
                     <h2 class="subtitle">
                         Transform a Lakkana chart into the table form
                     </h2>
-                    <router-link to="/TranstoLukkana" class="button is-light is-outlined">Transform to table</router-link>
+                    <router-link to="/TranstoTable" class="button is-light is-outlined">Transform to table</router-link>
                 </div>
             </div>
         </section>

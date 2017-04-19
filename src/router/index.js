@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Index from '@/components/Index';
 import Exercise from '@/components/Exercise';
-import TranstoLukkana from '@/components/TransToLakkana';
+import TranstoTable from '@/components/TransToTable';
 
 Vue.use(Router);
 
@@ -19,9 +19,9 @@ export default new Router({
             component: Exercise,
         },
         {
-            name: 'TranstoLukkana',
-            path: '/TranstoLukkana',
-            component: TranstoLukkana,
+            name: 'TranstoTable',
+            path: '/TranstoTable',
+            component: TranstoTable,
         },
     ],
 });

@@ -2,15 +2,14 @@
 <div class="wrapper">
 <section class="header">
     <div>
-        <h1 class="header_text"> Transform Mapping-Table to Lakkana Chart </h1>
+        <h1 class="header_text"> Transform Lakkana Chart to Mapping-Table </h1>
     </div>
     <div class="header_image">
-        <img src="../assets/chart.png" alt="chart">
+        <lakkana></lakkana>
     </div>
 </section>
     <div class = "select_area">
-        <p class="symbol"> 
-        <img src ="../assets/A1.png"> :
+        <p class="symbol"> ๑ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -29,29 +28,7 @@
             </select>
         </span>
         </p>
-        <p class="symbol"> 
-         <img src ="../assets/A2.png"> :
-            <span class="select">
-            <select>
-                <option>none</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>        
-            </select>
-        </span>
-        </p>
-        </p>
-        <p class="symbol"> 
-        <img src ="../assets/A3.png"> :
+        <p class="symbol"> ๒ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -71,8 +48,7 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/A4.png"> :
+        <p class="symbol"> ๓ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -92,8 +68,7 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/A5.png"> :
+        <p class="symbol"> ๔ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -113,8 +88,7 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/A6.png"> :
+        <p class="symbol"> ๕ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -134,8 +108,7 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/A7.png"> :
+        <p class="symbol"> ๖ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -155,8 +128,7 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/A8.png"> :
+        <p class="symbol"> ๗ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -176,8 +148,27 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/A9.png"> :
+        <p class="symbol"> ๘ :
+            <span class="select">
+            <select>
+                <option>none</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>        
+            </select>
+        </span>
+        </p>
+        </p>
+        <p class="symbol"> ๙ :
             <span class="select">
             <select>
                 <option>none</option>
@@ -217,8 +208,7 @@
         </span>
         </p>
         </p>
-        <p class="symbol"> 
-        <img src ="../assets/ARlux.png"> :
+        <p class="symbol"> ล :
             <span class="select">
             <select>
                 <option>none</option>
@@ -246,9 +236,12 @@
 </template>
 
 <script>
+ import Lakkana from './LakkanaChart';
 
 export default {
-
+     components: {
+         lakkana: Lakkana,
+     },
 };
 
 </script>
@@ -262,8 +255,8 @@ p.symbol {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    font-size : 200%;
-    color: black;
+    font-size : 150%;
+    color: #bbb;
 }
 
 button.transform {
@@ -334,6 +327,6 @@ h1.header_text{
     color: #a49cba;
 }
 div.select_area{
-     background-color: #333;
+     background-color: #111;
 }
 </style>
