@@ -4,50 +4,50 @@
             <img class="chart-img" src="../assets/chart.png" alt="">
         
             <div class="one-clock">
-                <img class="star-img" src="../assets/A1.png">
+                <img class="star-img" src="../assets/s1.png">
             </div>
 
             <div class="two-clock">
-                <img class="star-img" src="../assets/A2.png">
+                <img class="star-img" src="../assets/s2.png">
             </div>
 
             <div class="three-clock">
-                <img class="star-img" src="../assets/A3.png">
+                <img class="star-img" src="../assets/s3.png">
             </div>
 
             <div class="four-clock">
-                <img class="star-img" src="../assets/A4.png">
+                <img class="star-img" src="../assets/s4.png">
             </div>
 
             <div class="five-clock">
-                <img class="star-img" src="../assets/A5.png">
+                <img class="star-img" src="../assets/s5.png">
             </div>
 
             <div class="six-clock">
-                <img class="star-img" src="../assets/A6.png">
+                <img class="star-img" src="../assets/s6.png">
             </div>
 
             <div class="seven-clock">
-                <img class="star-img" src="../assets/A7.png">
+                <img class="star-img" src="../assets/s7.png">
 
             </div>
 
             <div class="eight-clock">
-                <img class="star-img" src="../assets/A8.png">
+                <img class="star-img" src="../assets/s8.png">
             </div>
 
             <div class="nine-clock">
-                <img class="star-img" src="../assets/A9.png">
+                <img class="star-img" src="../assets/s9.png">
             </div>
 
 
             <div class="ten-clock">
-                <img class="star-img" src="../assets/A10.png">
+                <img class="star-img" src="../assets/s10.png">
             </div>
 
 
             <div class="eleven-clock">
-                <img class="star-img" src="../assets/ARlux.png">
+                <img class="star-img" src="../assets/slak.png">
             </div>
 
             <div class="twelve-clock">
@@ -57,16 +57,6 @@
             </div>
 
         </div>
-        <div>
-            <h1 class="title">
-                Your Lakkana Zodiac is
-            </h1>
-        </div>
-        <div>
-            <h1 class="title">
-                Gemini
-            </h1>
-        </div>        
         <router-link to="/">
             <div class="footer-button">
                 BACK HOME
@@ -205,7 +195,6 @@ export default {
     }
     .wrapper {
         background-color: #222;
-        padding-bottom: 30vw;
     }
     .footer-button {
         position: fixed;
@@ -218,9 +207,5 @@ export default {
         padding: 4.5vmin 0;
         font-size: 5.2vw;
         font-weight: bold;
-    }
-    h1, .title {
-        text-align: center;
-        color: #bbb;
     }
 </style>

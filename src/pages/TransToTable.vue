@@ -196,7 +196,7 @@
             </select>
         </span>
         </p>
-        <p class="symbol"> <img src="../assets/ARlux.png" class="ARlux"> :
+        <p class="symbol"> <img src="../assets/slak.png" class="ARlux"> :
             <span class="select">
             <select>
                 <option>none</option>
@@ -226,7 +226,7 @@
 </template>
 
 <script>
- import Lakkana from './LakkanaChart';
+ import Lakkana from '../components/LakkanaChart';
 
 export default {
      components: {

@@ -3,7 +3,9 @@
         <nav class="nav">
 
             <div class="nav-left">
-                <img src="../assets/zodi.png" alt="zodi">
+                <router-link to="/">
+                    <img src="../assets/zodi.png" alt="zodi">
+                </router-link>
             </div>
 
             <span class="nav-toggle" @click="hamburger">

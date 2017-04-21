@@ -14,7 +14,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A1.png"> = Sun</div>
+                            <div><img  src="../assets/s1.png"> = Sun</div>
                         </td>
                         
                         <td>
@@ -39,7 +39,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A2.png"> = Moon</div>
+                            <div><img  src="../assets/s2.png"> = Moon</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A3.png"> = Mar</div>
+                            <div><img  src="../assets/s3.png"> = Mar</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -87,7 +87,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A4.png"> = Mercury</div>
+                            <div><img  src="../assets/s4.png"> = Mercury</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -111,7 +111,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A5.png"> = Jupiter</div>
+                            <div><img  src="../assets/s5.png"> = Jupiter</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -135,7 +135,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A6.png"> = Venus</div>
+                            <div><img  src="../assets/s6.png"> = Venus</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -159,7 +159,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A7.png"> = Saturn</div>
+                            <div><img  src="../assets/s7.png"> = Saturn</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -183,7 +183,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A8.png"> = Eclipse</div>
+                            <div><img  src="../assets/s8.png"> = Eclipse</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -207,7 +207,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A9.png"> = Neptune</div>
+                            <div><img  src="../assets/s9.png"> = Neptune</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -231,7 +231,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/A10.png"> = Uranus</div>
+                            <div><img  src="../assets/s10.png"> = Uranus</div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">
@@ -255,7 +255,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><img  src="../assets/ARlux.png"> = Lakkana </div>
+                            <div><img  src="../assets/slak.png"> = Lakkana </div>
                         </td>
                         <td>
                             <div class="ZodiacSeletor">

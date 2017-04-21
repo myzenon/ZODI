@@ -1,16 +1,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/components/Index';
-import Exercise from '@/components/Exercise';
+import Index from '@/pages/Index';
+import Exercise from '@/pages/Exercise';
 
-import TransTable from '@/components/TransTable';
-import TransTableResult from '@/components/TransTable-Result';
+import TransTable from '@/pages/TransTable';
+import TransTableResult from '@/pages/TransTable-Result';
 
-import Create from '@/components/Create';
-import CreateResult from '@/components/Create-Result';
+import Create from '@/pages/Create';
+import CreateResult from '@/pages/Create-Result';
 
-import TranstoTable from '@/components/TransToTable';
-import TableFromLukkana from '@/components/TransToTable-Result';
+import TranstoTable from '@/pages/TransToTable';
+import TableFromLukkana from '@/pages/TransToTable-Result';
 
 Vue.use(Router);
 

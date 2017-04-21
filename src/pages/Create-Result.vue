@@ -1,68 +1,5 @@
 <template>
-    <div class="wrapper"> 
-        <div class="lakkana-chart">
-            <img class="chart-img" src="../assets/chart.png" alt="">
-        
-            <div class="one-clock">
-                <img class="star-img" src="../assets/A1.png">
-            </div>
-
-            <div class="two-clock">
-                <img class="star-img" src="../assets/A2.png">
-            </div>
-
-            <div class="three-clock">
-                <img class="star-img" src="../assets/A3.png">
-            </div>
-
-            <div class="four-clock">
-                <img class="star-img" src="../assets/A4.png">
-            </div>
-
-            <div class="five-clock">
-                <img class="star-img" src="../assets/A5.png">
-            </div>
-
-            <div class="six-clock">
-                <img class="star-img" src="../assets/A6.png">
-            </div>
-
-            <div class="seven-clock">
-                <img class="star-img" src="../assets/A7.png">
-
-            </div>
-
-            <div class="eight-clock">
-                <img class="star-img" src="../assets/A8.png">
-            </div>
-
-            <div class="nine-clock">
-                <img class="star-img" src="../assets/A9.png">
-            </div>
-
-
-            <div class="ten-clock">
-                <img class="star-img" src="../assets/A10.png">
-            </div>
-
-
-            <div class="eleven-clock">
-                <img class="star-img" src="../assets/ARlux.png">
-            </div>
-
-            <div class="twelve-clock">
-            </div>
-
-            <div>
-            </div>
-
-        </div>
-        <router-link to="/">
-            <div class="footer-button">
-                BACK HOME
-            </div>
-        </router-link>
-    </div>
+    
 </template>
 
 <script>
@@ -195,6 +132,7 @@ export default {
     }
     .wrapper {
         background-color: #222;
+        padding-bottom: 30vw;
     }
     .footer-button {
         position: fixed;
@@ -207,5 +145,9 @@ export default {
         padding: 4.5vmin 0;
         font-size: 5.2vw;
         font-weight: bold;
+    }
+    h1, .title {
+        text-align: center;
+        color: #bbb;
     }
 </style>
