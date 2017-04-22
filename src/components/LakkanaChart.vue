@@ -1,127 +1,82 @@
 <template>
     <div class="lakkana-chart">
+        <h1>{{chartMap}}</h1>
         <img class="chart-img" src="../assets/chart.png" alt="">
-        
-        <div class="one-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-            <img class="star-img" src="../assets/s6.png">
-        </div>
-
-        <div class="two-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-        <div class="three-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-        <div class="four-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-            <img class="star-img" src="../assets/s6.png">
-        </div>
-
-        <div class="five-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-        <div class="six-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-        <div class="seven-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-        <div class="eight-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-            <img class="star-img" src="../assets/s6.png">
-        </div>
-
-        <div class="nine-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-
-        <div class="ten-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-            <img class="star-img" src="../assets/s6.png">
-        </div>
-
-
-        <div class="eleven-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
-        <div class="twelve-clock">
-            <img class="star-img" src="../assets/s1.png">
-            <img class="star-img" src="../assets/s2.png">
-            <img class="star-img" src="../assets/s3.png">
-            <img class="star-img" src="../assets/s4.png">
-            <img class="star-img" src="../assets/s5.png">
-        </div>
-
+        <div v-for="className in Object.keys(chartHTML)" :class="className" v-html="getHTML(chartHTML[className])"></div>
     </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return {
+            chartHTML: {},
+            selfUpdate: false,
+        };
+    },
+    props: {
+        chartMap: {
+            type: Object,
+            required: true,
+        },
+        chartType: {
+            type: String,
+            required: true,
+        },
+    },
+    created() {
+        this.createChart();
+        this.$data.selfUpdate = false;
+    },
+    updated() {
+        if (this.$data.selfUpdate) {
+            this.$data.selfUpdate = false;
+        }
+        else {
+            this.createChart();
+        }
+    },
+    methods: {
+        createChart() {
+            this.$data.chartHTML = {};
+            const chartClass = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven'];
+            const chartMap = this.$props.chartMap;
+            if (chartMap) {
+                Object.keys(chartMap).forEach((chartPosition) => {
+                    if (chartMap[chartPosition] >= 0) {
+                        const className = chartClass[chartMap[chartPosition]] + '-clock';
+                        if (!this.$data.chartHTML[className]) {
+                            this.$data.chartHTML[className] = [];
+                        }
+                        this.$data.chartHTML[className].push('<img class="star-img" src="' + require('../assets/' + chartPosition + '.png') + '">');
+                    }
+                });
+            }
+            this.$data.selfUpdate = true;
+        },
+        getHTML(array) {
+            let contentHTML = '';
+            array.forEach((item) => {
+                contentHTML += item;
+            });
+            return contentHTML;
+        },
+    },
 };
 </script>
 
 <style>
+    .lakkana-chart .star-img {
+        width: 4.5vw;
+        margin: 4.5% 3.5%;
+    }
+</style>
+
+<style scoped>
     .lakkana-chart {
         position: relative;
         font-size: 0;
         width: 100%;
-    }
-    .lakkana-chart .star-img {
-        width: 4.5vw;
-        margin: 4.5% 3.5%;
     }
     .chart-img {
         width: 100%;

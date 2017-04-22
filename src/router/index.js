@@ -1,25 +1,30 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+
 import Index from '@/pages/Index';
-import Exercise from '@/pages/Exercise';
-
-import TransTable from '@/pages/TransTable';
-import TransTableResult from '@/pages/TransTable-Result';
-
 import Create from '@/pages/Create';
-import CreateResult from '@/pages/Create-Result';
-
-import TranstoTable from '@/pages/TransToTable';
-import TableFromLukkana from '@/pages/TransToTable-Result';
+import ChartTable from '@/pages/ChartTable';
+import TableChart from '@/pages/TableChart';
+import Exercise from '@/pages/Exercise';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     routes: [
         {
             name: 'index',
             path: '/',
             component: Index,
+        },
+        {
+            name: 'create',
+            path: '/create',
+            component: Create,
+        },
+        {
+            name: 'chart-table',
+            path: '/chart-table',
+            component: ChartTable,
         },
         {
             name: 'exercise',
@@ -29,32 +34,14 @@ export default new Router({
         {
             name: 'table-chart',
             path: '/table-chart',
-            component: TransTable,
-        },
-        {
-            name: 'tableResult',
-            path: '/Table-Result',
-            component: TransTableResult,
-        },
-        {
-            name: 'create',
-            path: '/create',
-            component: Create,
-        },
-        {
-            name: 'createResult',
-            path: '/createResult',
-            component: CreateResult,
-        },
-        {
-            name: 'chart-table',
-            path: '/chart-table',
-            component: TranstoTable,
-        },
-        {
-            name: 'TableFromLukkana',
-            path: '/TransToTable-Result',
-            component: TableFromLukkana,
+            component: TableChart,
         },
     ],
 });
+
+router.beforeEach((to, from, next) => {
+    window.scrollTo(0, 0);
+    next();
+});
+
+export default router;

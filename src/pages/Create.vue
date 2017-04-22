@@ -54,11 +54,8 @@
             </div>
         </div>
         <div v-if="page === 'result'" id="result">
-            <div class="wrapper"> 
-                <div class="lakkana-chart">
-                    <img class="chart-img" src="../assets/chart.png" alt="">
-                    <div v-for="className in Object.keys(chartHTML)" :class="className" v-html="getHTML(chartHTML[className])"></div>
-                </div>
+            <div class="wrapper wrapper-result"> 
+                <lakkanaChart :chartMap="chartMap" chartType="1"></lakkanaChart>
                 <div>
                     <h5 class="zodiac-title zodiac-text">
                         Your Lakkana Zodiac is
@@ -79,6 +76,7 @@
 
 <script>
 import FooterBar from '../components/FooterBar';
+import LakkanaChart from '../components/LakkanaChart';
 import countries from '../data/countries_name.json';
 
 const twoDigits = number => ('0' + number).slice(-2);
@@ -95,7 +93,6 @@ export default {
             profiles: [],
             page: 'create',
             chartMap: null,
-            chartHTML: {},
             lakkanaZodiac: null,
         };
     },
@@ -103,7 +100,7 @@ export default {
         if (this.$localStorage.get('profiles') === null) {
             this.$localStorage.set('profiles', JSON.stringify([]));
         }
-        this.$data.profiles = JSON.parse(this.$localStorage.get('profiles'));
+        this.$data.profiles = JSON.parse(this.$localStorage.get('profiles')).reverse();
     },
     methods: {
         getProfile() {
@@ -124,18 +121,34 @@ export default {
             this.$localStorage.set('profiles', JSON.stringify(this.$data.profiles));
         },
         create() {
-            if (!this.$data.selectedProfile) {
-                this.createNewProfile();
+            if (this.$data.profile.birth === '') {
+                alert('Please input your date/time of birth');
             }
-            this.$data.page = 'loading';
-            this.$http.post('http://localhost:7000/chart', this.getProfile()).then((response) => {
-                this.$data.page = 'result';
-                this.$data.chartMap = response.body;
-                this.createChart();
-            }, () => {
-                this.$data.page = 'create';
-            });
-            this.resetForm();
+            else {
+                if (!this.$data.selectedProfile) {
+                    this.createNewProfile();
+                }
+                this.$data.page = 'loading';
+                this.$http.post('http://zenon-si.ar-bro.net:7000/chart', this.getProfile()).then((response) => {
+                    if (response.body.slak !== -1) {
+                        this.$data.chartMap = response.body;
+                        this.$data.page = 'result';
+                        window.scrollTo(0, 0);
+                        const zodiac = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+                        this.$data.lakkanaZodiac = zodiac[this.$data.chartMap.slak];
+                    }
+                    else {
+                        alert('Cannot find your Lakkana Chart');
+                        window.scrollTo(0, 0);
+                        this.$router.push({ name: 'index' });
+                    }
+                }, () => {
+                    alert('Cannot connect to the server');
+                    window.scrollTo(0, 0);
+                    this.$router.push({ name: 'index' });
+                });
+                this.resetForm();
+            }
         },
         resetForm() {
             this.$data.selectedProfile = null;
@@ -177,31 +190,10 @@ export default {
                 + profile.minute
             );
         },
-        createChart() {
-            const chartClass = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven'];
-            const chartMap = this.$data.chartMap;
-            if (chartMap) {
-                Object.keys(chartMap).forEach((chartPosition) => {
-                    const className = chartClass[chartMap[chartPosition]] + '-clock';
-                    if (!this.$data.chartHTML[className]) {
-                        this.$data.chartHTML[className] = [];
-                    }
-                    this.$data.chartHTML[className].push('<img class="star-img" src="' + require('../assets/' + chartPosition + '.png') + '">');
-                });
-            }
-            const zodiac = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
-            this.$data.lakkanaZodiac = zodiac[chartMap.slak];
-        },
-        getHTML(array) {
-            let contentHTML = '';
-            array.forEach((item) => {
-                contentHTML += item;
-            });
-            return contentHTML;
-        },
     },
     components: {
         footerBar: FooterBar,
+        lakkanaChart: LakkanaChart,
     },
 };
 </script>
@@ -257,7 +249,7 @@ export default {
 <style scoped>
     .zodiac-name {
         margin-top: -2vh;
-        font-size: 3.5rem;
+        font-size: 3.25rem;
         font-weight: bold;
         color: #bb89f9!important;
     }
@@ -270,5 +262,8 @@ export default {
     }
     .lakkana-chart {
         margin-bottom: 1vh;
+    }
+    .wrapper-result {
+        margin-bottom: 14vmin;
     }
 </style>
