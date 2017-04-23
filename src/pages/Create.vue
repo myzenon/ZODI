@@ -129,7 +129,7 @@ export default {
                     this.createNewProfile();
                 }
                 this.$data.page = 'loading';
-                this.$http.post('http://zenon-si.ar-bro.net:7000/chart', this.getProfile()).then((response) => {
+                this.$http.post('http://139.59.243.217:7000/chart', this.getProfile()).then((response) => {
                     if (response.body.slak !== -1) {
                         this.$data.chartMap = response.body;
                         this.$data.page = 'result';
