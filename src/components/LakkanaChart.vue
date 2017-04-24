@@ -1,7 +1,8 @@
 <template>
     <div class="lakkana-chart">
         <h1>{{chartMap}}</h1>
-        <img class="chart-img" src="../assets/chart.png" alt="">
+        <img v-if="chartType === '1'" class="chart-img" src="../assets/chart.png" alt="">
+        <img v-if="chartType === '2'" class="chart-img" src="../assets/chart-position.png" alt="">
         <div v-for="className in Object.keys(chartHTML)" :class="className" v-html="getHTML(chartHTML[className])"></div>
     </div>
 </template>
@@ -124,8 +125,8 @@ export default {
     }
     .five-clock {
         position: absolute;
-        top: 65%;
-        left: 28%;
+        top: 68%;
+        left: 28.5%;
         width: 12%;
         // background-color: #F00;
         display: flex;
@@ -146,8 +147,8 @@ export default {
     }
     .seven-clock {
         position: absolute;
-        top: 65%;
-        left: 59.5%;
+        top: 68%;
+        left: 59%;
         width: 12%;
         // background-color: #F00;
         display: flex;

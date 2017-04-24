@@ -23,7 +23,7 @@
                     </h3>
                 </div>
             </div>
-            <div @click="changePage('lec1')">
+            <div @click.stop="changePage('lec1')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -34,10 +34,10 @@
                     <h2>
                         From the following chart, we have to find a start point from the birth month.
                     </h2>
-                    <img src="../assets/chart-month.png" alt="">
+                    <img src="../assets/chart-month-time.png" alt="">
                 </div>
             </div>
-            <div @click="changePage('ex1')">
+            <div @click.stop="changePage('ex1')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -46,13 +46,13 @@
             <div class="wrapper">
                 <div class="question">
                     <div class="container">
-                        <img src="../assets/chart-month.png" alt="">
+                        <img src="../assets/chart-month-time.png" alt="">
                         Where is the index of start point ?
                     </div>
                 </div>
                 <div class="answers-box">
                     <div @click="incorrectAnswer" class="answer">At point 1</div>
-                    <div @click="changePage('lec2')" class="answer">At point 4</div>
+                    <div @click.stop="changePage('lec2')" class="answer">At point 4</div>
                     <div @click="incorrectAnswer" class="answer">At point 7</div>
                     <div @click="incorrectAnswer" class="answer">At point 10</div>
                 </div>
@@ -65,10 +65,10 @@
                     <h2>
                         Each of chart slot has a different value. We will find a Lakkana zodiac from a calculation of these value.
                     </h2>
-                    <img src="../assets/chart-time.png" alt="">
+                    <img src="../assets/chart-month-time.png" alt="">
                 </div>
             </div>
-            <div @click="changePage('lec3')">
+            <div @click.stop="changePage('lec3')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -85,10 +85,10 @@
                     <h3>
                         No, not start from 0 !
                     </h3>
-                    <img src="../assets/chart-time-july.png" alt="">
+                    <img src="../assets/chart-month-time-july.png" alt="">
                 </div>
             </div>
-            <div @click="changePage('lec4')">
+            <div @click.stop="changePage('lec4')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -114,10 +114,10 @@
                     <h3 style="color: #a8c6e8;">
                         (max-value slot) * (days) / 30
                     </h3>
-                    <img src="../assets/chart-time-july.png" alt="">
+                    <img src="../assets/chart-month-time-july.png" alt="">
                 </div>
             </div>
-            <div @click="changePage('ex2')">
+            <div @click.stop="changePage('ex2')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -134,7 +134,7 @@
                 <div class="answers-box">
                     <div @click="incorrectAnswer" class="answer">10</div>
                     <div @click="incorrectAnswer" class="answer">15</div>
-                    <div @click="changePage('lec5')" class="answer">20</div>
+                    <div @click.stop="changePage('lec5')" class="answer">20</div>
                     <div @click="incorrectAnswer" class="answer">30</div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
                     </h2>
                 </div>
             </div>
-            <div @click="changePage('lec6')">
+            <div @click.stop="changePage('lec6')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -174,7 +174,7 @@
         <div v-if="page === 'lec6'" id="lec6">
             <div class="wrapper">
                 <div class="wrapper-lec">
-                    <img src="../assets/chart-time-july.png" alt="">
+                    <img src="../assets/chart-month-time-july.png" alt="">
                     <h4>
                         From the previous value <span style="color: #35dabd;">277</span>, we have to minus it with each slot value counter-clockwise
                     </h4>
@@ -190,7 +190,7 @@
                     </h2>
                 </div>
             </div>
-            <div @click="changePage('ex3')">
+            <div @click.stop="changePage('ex3')">
                 <footerBar name="NEXT"></footerBar>
             </div>
         </div>
@@ -199,15 +199,14 @@
             <div class="wrapper">
                 <div class="question">
                     <div class="container">
-                        <img src="../assets/chart-time-july.png" alt="">
-                        <img src="../assets/chart-month.png" alt="">
+                        <img src="../assets/chart-month-time-july.png" alt="">
                         What is a Lakkana Slot ?
                         <br>
                         <i style="color: #AAA;">Minus until found negative value.</i>
                     </div>
                 </div>
                 <div class="answers-box">
-                    <div @click="changePage('lec7')" class="answer">At point 6</div>
+                    <div @click.stop="changePage('lec7')" class="answer">At point 6</div>
                     <div @click="incorrectAnswer" class="answer">At point 7</div>
                     <div @click="incorrectAnswer" class="answer">At point 9</div>
                     <div @click="incorrectAnswer" class="answer">At point 11</div>

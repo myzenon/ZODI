@@ -24,9 +24,15 @@
                         </p>
                     </div>
                     <div class="field">
-                        <label class="label">Date / Time of Birth</label>
+                        <label class="label">Date of Birth</label>
                         <p class="control">
-                            <input class="input" type="datetime-local" v-model="profile.birth" :disabled="selectedProfile">
+                            <input class="input" type="date" v-model="profile.date" :disabled="selectedProfile">
+                        </p>
+                    </div>
+                    <div class="field">
+                        <label class="label">Time of Birth</label>
+                        <p class="control">
+                            <input class="input" type="time" v-model="profile.time" :disabled="selectedProfile">
                         </p>
                     </div>
                     <div class="field">
@@ -86,7 +92,8 @@ export default {
         return {
             selectedProfile: null,
             profile: {
-                birth: '',
+                date: '',
+                time: '',
                 country: 'Thailand',
             },
             countries,
@@ -104,14 +111,14 @@ export default {
     },
     methods: {
         getProfile() {
-            const timeZone = new Date().toString().match(/([-+][0-9]+)\s/)[1];
-            const date = new Date(this.$data.profile.birth + timeZone);
+            const date = new Date(this.$data.profile.date);
+            const time = this.$data.profile.time.split(':');
             return {
                 day: twoDigits(date.getDate()),
                 month: twoDigits(date.getMonth() + 1),
                 year: date.getFullYear(),
-                hour: twoDigits(date.getHours()),
-                minute: twoDigits(date.getMinutes()),
+                hour: twoDigits(time[0]),
+                minute: twoDigits(time[1]),
                 country: this.$data.profile.country,
             };
         },
@@ -161,7 +168,8 @@ export default {
             const selectedProfile = this.$data.selectedProfile;
             if (selectedProfile) {
                 this.$data.profile = {
-                    birth: selectedProfile.year + '-' + selectedProfile.month + '-' + selectedProfile.day + 'T' + selectedProfile.hour + ':' + selectedProfile.minute,
+                    date: selectedProfile.year + '-' + selectedProfile.month + '-' + selectedProfile.day,
+                    time: selectedProfile.hour + ':' + selectedProfile.minute,
                     country: selectedProfile.country,
                 };
             }
@@ -171,8 +179,6 @@ export default {
                 profile.year,
                 profile.month - 1,
                 profile.day,
-                profile.hour,
-                profile.minute,
             );
             const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
             const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
