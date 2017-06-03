@@ -67,8 +67,26 @@
                         CAMT CMU
                     </h1>
                     <h2 class="subtitle">
-                        Our team are come from College of Arts Media and Technology at Chiang Mai University
+                        <div>Our team is students from <strong>Chiang Mai University</strong>.</div>
+                        <div>Which consists of 20 facilities and 1 college, we come from <strong>College of Arts, Media, and Technology</strong>.</div>
+                        <div>This project is a part of <strong>Software Training Camp</strong> course. Developed by a group of students as follows.</div>
                     </h2>
+                    <h2 class="subtitle">
+                        <strong>TEAM MEMBER</strong>
+                    </h2>
+                    <h3 class="subtitle">
+                        <div>572115016 Chetthaphan Kammasit</div>
+                        <div>572115027 Tanaphum Wichaita </div>
+                        <div>572115035 Nitipoom Yawichai</div>
+                        <div>572115064 Ariya Indhabhandhu</div>
+                        <div>[Adviser] Kittitouch Suteeca</div>
+                    </h3>
+                    <h2 class="subtitle">
+                        <strong>ADDRESS</strong>
+                    </h2>
+                    <h3 class="subtitle">
+                        239, Huay Kaew Road, Muang District, Chiang Mai Thailand, 50200
+                    </h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1542.808413910471!2d98.95059332105117!3d18.79992761407233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x85fbac3033920444!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4Lio4Li04Lil4Lib4LiwIOC4quC4t-C5iOC4rSDguYHguKXguLDguYDguJfguITguYLguJnguYLguKXguKLguLU!5e0!3m2!1sth!2sth!4v1491637654507" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
@@ -145,5 +163,11 @@ export default {
     }
     .section5 {
         background-color: #7a52b5;
+    }
+    h2 div {
+        padding: 1rem 0;
+    }
+    h3.subtitle {
+        font-size: 1.1rem;
     }
 </style>
